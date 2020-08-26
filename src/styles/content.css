@@ -1,0 +1,134 @@
+/* RULES */
+
+/* ABOUT */
+
+.about {
+    width: 1024px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.5;
+}
+
+.about-body {
+    display: inline;
+}
+
+.about-body-bold {
+    display: inline;
+    font-weight: 400;
+}
+
+.about-body-italic {
+    display: inline;
+    font-style: italic;
+}
+
+.about-body-link {
+    color: var(--secondary);
+    transition: var(--anim-02);
+}
+
+.about-body-link:hover, .about-body-link:focus {
+    color: var(--primary);
+}
+
+/* REUSABLE */
+
+.columns {
+    display: flex;
+    flex-wrap: nowrap;
+    width: 1024px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.column {
+    position: relative;
+    width: 100%;
+}
+
+.column-break {
+    max-width: 15px;
+    min-width: 15px;
+    height: 100%;
+}
+
+.column img {
+    display: block;
+    width: 100%;
+    margin-bottom: 15px;
+    transition: var(--anim-02);
+    cursor: pointer;
+}
+
+.column img:hover, .column img:focus {
+    opacity: 0.5;
+}
+
+/* RESUME */
+
+.resume-jpg {
+    position: relative;
+    width: 1024px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.resume-jpg img {
+    max-width: 100%;
+}
+
+.resume-btn {
+    position: relative;
+    width: 256px;
+    margin-top: 25px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.resume-btn-shape {
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    border: 1px solid var(--secondary);
+    border-radius: 8px;
+    line-height: 1;
+    background: var(--bg);
+    color: var(--secondary);
+    transition: var(--anim-02);
+}
+
+.resume-btn-shape:hover, .resume-btn-shape:focus { 
+    background: var(--secondary);
+    color: var(--txt-contrast);
+}
+
+.resume-btn-shape h4 {
+    margin-top: 2px;
+    text-align: center;
+    font-weight: 500;
+}
+
+/* MEDIA QUERIES */
+
+@media screen and (max-width: 1600px) {
+    
+}
+@media screen and (max-width: 1280px) {
+    
+}
+@media screen and (max-width: 1000px) {
+    
+}
+@media screen and (max-width: 800px) {
+    
+}
+@media screen and (max-width: 600px) {
+    
+}
+@media screen and (max-width: 480px) {
+    
+}
+@media screen and (max-width: 360px) {
+    
+}
