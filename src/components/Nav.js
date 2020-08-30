@@ -7,12 +7,16 @@ import img_profile from '../images/profile.png';
 
 ////////// COMPONENT //////////
 export default function Nav(props) {
-  const { page } = React.useContext(Global);
+  const { page, checkPage } = React.useContext(Global);
+  React.useEffect(() => {
+    checkPage();
+    // eslint-disable-next-line
+  }, []);
 
   return (<>
     <nav id="nav">
       <div className="nav-break" />
-      <div className="nav-bar">
+      <div className="nav-bar" onClick={() => checkPage()}>
         <div className="nav-bar-fix">
           <Link to="/"><div className={page === `about` ? `nav-bar-btn-active` : `nav-bar-btn`}><h4>ABOUT</h4></div></Link>
           <Link to="/character-design"><div className={page === `character-design` ? `nav-bar-btn-active` : `nav-bar-btn`}><h4>CHARACTER&nbsp;DESIGN</h4></div></Link>

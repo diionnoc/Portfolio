@@ -25,7 +25,7 @@
 
 .about-body-link {
     color: var(--secondary);
-    transition: var(--anim-02);
+    transition: var(--anim-norm);
 }
 
 .about-body-link:hover, .about-body-link:focus {
@@ -57,7 +57,7 @@
     display: block;
     width: 100%;
     margin-bottom: 15px;
-    transition: var(--anim-02);
+    transition: var(--anim-norm);
     cursor: pointer;
 }
 
@@ -95,7 +95,7 @@
     line-height: 1;
     background: var(--bg);
     color: var(--secondary);
-    transition: var(--anim-02);
+    transition: var(--anim-norm);
 }
 
 .resume-btn-shape:hover, .resume-btn-shape:focus { 
@@ -107,6 +107,79 @@
     margin-top: 2px;
     text-align: center;
     font-weight: 500;
+}
+
+/* CAROUSEL */
+
+#carousel {
+    z-index: 1000;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+}
+
+.open {
+    display: block;
+    -webkit-animation: fadein var(--anim-norm);
+    animation: fadein var(--anim-norm);
+}
+
+.close {
+    display: none;
+}
+
+.carousel-backdrop {
+    z-index: 1000;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background: #000000dd;
+}
+
+.carousel-image {
+    z-index: 1001;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 1024px;
+    max-height: 90%;
+}
+
+.carousel-arrow {
+    z-index: 1001;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    max-width: 48px;
+    max-height: 48px;
+    opacity: 1;
+    transition: var(--anim-norm);
+    cursor: pointer;
+}
+
+.carousel-arrow:hover {
+    opacity: 0.5;
+}
+
+.carousel-arrow-left {
+    left: 20px;
+}
+
+.carousel-arrow-right {
+    right: 20px;
+}
+
+/* ANIMATION */
+
+@-webkit-keyframes fadein {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@keyframes fadein {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
 }
 
 /* MEDIA QUERIES */

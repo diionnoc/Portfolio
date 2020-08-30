@@ -32,7 +32,7 @@ nav {
     color: var(--txt-primary);
     text-align: center;
     cursor: pointer;
-    transition: var(--anim-02);
+    transition: var(--anim-norm);
 }
 
 .nav-bar-btn:hover, .nav-bar-btn:focus {

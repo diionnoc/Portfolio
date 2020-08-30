@@ -1,12 +1,8 @@
 ////////// DEPENDENCIES //////////
 import React from 'react';
-import { Global } from '../utils/Global';
 
 ////////// COMPONENT //////////
 export default function About(props) {
-  const { checkPage } = React.useContext(Global);
-  React.useEffect(() => { checkPage(); });
-
   return (<>
     <main id="about">
       <section id="section-about">
