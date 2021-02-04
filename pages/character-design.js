@@ -10,7 +10,7 @@ import { checkOdd } from "@utils/tools";
 
 import Image from "next/image";
 
-const dir = `/static/images/characterDesign`;
+const dir = `/images/characterDesign`;
 
 //////////////////////// COMPONENT ////////////////////////
 export default function CharacterDesign(props) {
@@ -47,7 +47,7 @@ export default function CharacterDesign(props) {
                 width={image?.size?.width}
                 height={image?.size?.height}
                 layout="responsive"
-                quality={5}
+                quality={20}
                 onClick={onImageClick(image?.src)}
               />
             </div>
@@ -63,7 +63,7 @@ export default function CharacterDesign(props) {
                 width={image?.size?.width}
                 height={image?.size?.height}
                 layout="responsive"
-                quality={5}
+                quality={20}
                 onClick={onImageClick(image?.src)}
               />
             </div>

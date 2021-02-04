@@ -7,7 +7,7 @@ import sizeOf from "image-size";
 
 import Image from "next/image";
 
-const dir = `/static/images/resume`;
+const dir = `/images/resume`;
 
 //////////////////////// COMPONENT ////////////////////////
 export default function Resume(props) {

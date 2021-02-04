@@ -10,7 +10,7 @@ import { checkOdd } from "@utils/tools";
 
 import Image from "next/image";
 
-const dir = `/static/images/illustration`;
+const dir = `/images/illustration`;
 
 //////////////////////// COMPONENT ////////////////////////
 export default function Illustration(props) {

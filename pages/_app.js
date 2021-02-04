@@ -1,8 +1,8 @@
 import React from "react";
 import Head from "next/head";
 
-import "@public/static/styles/reset.css";
-import "@public/static/styles/style.scss";
+import "@public/styles/reset.css";
+import "@public/styles/style.scss";
 
 import Header from "@components/_Header";
 import Content from "@components/_Content";

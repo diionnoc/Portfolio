@@ -7,7 +7,7 @@ import { MdMail } from "react-icons/md";
 
 // This is the data for the "Header" navigation at the top
 export const header = {
-  profile: `/static/images/profile.png`,
+  profile: `/images/profile.png`,
 };
 
 // This is the data for the "Footer" at the bottom
