@@ -6,6 +6,7 @@
 .env.test
 .env.test.local
 .eslintcache
+.firebase/
 .lock-wscript
 .netlify
 .next/

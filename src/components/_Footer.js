@@ -1,15 +1,15 @@
 import React from "react";
-import { footer } from "@lib/content";
+import { footer } from "lib/content";
 
 //////////////////////// COMPONENT ////////////////////////
 export default function Footer(props) {
   return (
-    <>
-      <footer id="footer">
+    <footer id="footer">
+      <div className="container">
         <div className="footer-break" />
         <div className="footer-wrap">
           <div className="footer-left">
-            <p>{footer?.copy}</p>
+            <h6>{footer?.copy}</h6>
           </div>
           <div className="footer-right">
             <div className="footer-social">
@@ -29,7 +29,7 @@ export default function Footer(props) {
             </div>
           </div>
         </div>
-      </footer>
-    </>
+      </div>
+    </footer>
   );
 }

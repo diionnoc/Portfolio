@@ -1,27 +1,37 @@
 {
   "name": "chelsea-diionno",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "author": "Eric Powell",
   "description": "Chelsea DiIonno | Character Designer & Visual Development Artist",
   "license": "ISC",
   "private": true,
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
   "scripts": {
-    "dev": "next",
-    "build": "next build",
-    "postbuild": "next-on-netlify",
-    "start": "next start",
-    "export": "next export"
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
   },
   "dependencies": {
     "image-size": "^0.9.3",
     "moment": "^2.29.1",
-    "next": "^10.0.3",
-    "next-images": "^1.6.2",
-    "next-on-netlify": "^2.7.2",
     "node-sass": "4.14.1",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
-    "react-icons": "^4.1.0"
+    "react-icons": "^4.1.0",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "^4.0.1"
   },
   "homepage": "https://chelseadiionno.com"
 }

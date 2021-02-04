@@ -1,21 +1,21 @@
 import React from "react";
-import { Modal } from "@utils/Modal";
+import { Modal } from "Modal";
 
-import CarouselBtn from "@components/CarouselBtn";
+import CarouselBtn from "components/CarouselBtn";
 
 //////////////////////// COMPONENT ////////////////////////
 export default function Carousel(props) {
-  const { images, setImages, selectedImage, setSelectedImage } = React.useContext(Modal);
+  const { modalImages, setModalImages, selectedImage, setSelectedImage } = React.useContext(Modal);
 
   const onPrevious = () => {
-    const index = images.indexOf(selectedImage);
-    if (index - 1 < 0) setSelectedImage(images[images.length - 1]);
-    else setSelectedImage(images[index - 1]);
+    const i = modalImages.indexOf(selectedImage);
+    if (i - 1 < 0) setSelectedImage(modalImages[modalImages.length - 1]);
+    else setSelectedImage(modalImages[i - 1]);
   };
   const onNext = () => {
-    const index = images.indexOf(selectedImage);
-    if (index + 1 > images.length - 1) setSelectedImage(images[0]);
-    else setSelectedImage(images[index + 1]);
+    const i = modalImages.indexOf(selectedImage);
+    if (i + 1 > modalImages.length - 1) setSelectedImage(modalImages[0]);
+    else setSelectedImage(modalImages[i + 1]);
   };
   const onWheel = (e) => {
     if (e.deltaY >= 0) onNext();
@@ -23,7 +23,7 @@ export default function Carousel(props) {
   };
 
   const onClose = () => {
-    setImages([]);
+    setModalImages([]);
     setSelectedImage(null);
     document.body.classList.remove("modal-open");
   };

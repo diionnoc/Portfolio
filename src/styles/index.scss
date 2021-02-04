@@ -37,11 +37,10 @@ $color-divider-2: #ffffff20;
 
 // TEXT
 $h1: 50px;
-$h2: 32px;
-$h3: 24px;
-$h4: 21px;
-$h5: 18px;
-$h6: 16px;
+$h2: 24px;
+$h3: 21px;
+$h6: 21px;
+$p: 21px;
 
 // FONT
 $font-family: "Josefin Sans", sans-serif;
@@ -52,6 +51,34 @@ $font-weight: 300;
 $trans-fast: all 0.1s ease-out;
 $trans-main: all 0.2s ease-out;
 $trans-slow: all 0.4s ease-out;
+
+// RESPONSIVENESS
+
+$break-xxl-max: 1360px;
+$break-xl-max: 1200px;
+$break-xl-min: 961px;
+$break-lg-max: 960px;
+$break-lg-min: 801px;
+$break-md-max: 800px;
+$break-md-min: 641px;
+$break-sm-max: 640px;
+$break-sm-min: 481px;
+$break-xs-max: 480px;
+$break-xs-min: 0px;
+$layout-xxl-max: "only screen and (max-width: #{$break-xxl-max})";
+$layout-xl-max: "only screen and (max-width: #{$break-xl-max})";
+$layout-lg-max: "only screen and (max-width: #{$break-lg-max})";
+$layout-md-max: "only screen and (max-width: #{$break-md-max})";
+$layout-sm-max: "only screen and (max-width: #{$break-sm-max})";
+$layout-xs-max: "only screen and (max-width: #{$break-xs-max})";
+
+// CONTAINER
+
+$container-xl: 1200px;
+$container-lg: 960px;
+$container-md: 680px;
+$container-sm: 420px;
+$container-xs: 320px;
 
 /* ------------------------ DEFAULT CSS ------------------------ */
 
@@ -80,25 +107,64 @@ body.modal-open {
 
 a {
   color: inherit;
+  transition: $trans-main;
 }
 
 h1 {
   font-size: $h1;
+  transition: $trans-main;
+  @media #{$layout-sm-max} {
+    font-size: 40px;
+    font-weight: 700;
+  }
+  @media #{$layout-xs-max} {
+    font-size: 32px;
+    font-weight: 700;
+  }
 }
 h2 {
+  line-height: 1.25;
   font-size: $h2;
+  transition: $trans-main;
+  @media #{$layout-sm-max} {
+    font-size: 20px;
+    font-weight: 600;
+  }
+  @media #{$layout-xs-max} {
+    font-size: 18px;
+    font-weight: 700;
+  }
 }
 h3 {
+  line-height: 0;
   font-size: $h3;
-}
-h4 {
-  font-size: $h4;
-}
-h5 {
-  font-size: $h5;
+  font-weight: 400;
+  transition: $trans-main;
+  @media #{$layout-xl-max} {
+    font-size: 18px;
+    font-weight: 600;
+  }
+  @media #{$layout-lg-max} {
+    font-size: 16px;
+    font-weight: 700;
+  }
 }
 h6 {
   font-size: $h6;
+  transition: $trans-main;
+  @media #{$layout-md-max} {
+    font-size: 20px;
+  }
+}
+p {
+  font-size: $p;
+  transition: $trans-main;
+  @media #{$layout-md-max} {
+    font-size: 18px;
+  }
+  @media #{$layout-xs-max} {
+    font-size: 16px;
+  }
 }
 
 #root {
@@ -109,6 +175,14 @@ h6 {
 section {
   position: relative;
   width: 100%;
+}
+
+// Container
+.container {
+  max-width: 1056px;
+  padding: 0 16px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 // Scroll to top button
@@ -128,11 +202,29 @@ section {
   font-size: 24px;
   transition: $trans-main;
   cursor: pointer;
-  &:hover {
+  &:hover,
+  &:focus {
     bottom: 54px;
-    border: 2px solid $color-main-1;
+    border-color: $color-main-1;
     color: $color-white;
     background-color: $color-main-1;
+  }
+  @media #{$layout-xxl-max} {
+    bottom: 24px;
+    right: 24px;
+    width: 40px;
+    height: 40px;
+    padding: 8px;
+    font-size: 20px;
+    &:hover,
+    &:focus {
+      bottom: 30px;
+    }
+  }
+  @media #{$layout-xl-max} {
+    border-color: $color-txt-1;
+    color: $color-white;
+    background-color: $color-txt-1;
   }
 }
 
@@ -140,82 +232,172 @@ section {
 
 header {
   z-index: 999;
+  position: relative;
   width: 100%;
-
-  .header-break {
-    width: 100%;
-    height: 0px;
-  }
 
   .header-nav {
     height: 50px;
     background: $color-main-1;
     box-shadow: 0 0 32px rgba(0, 0, 0, 0.1);
+    @media #{$layout-md-max} {
+      display: none;
+    }
 
-    nav {
+    .nav {
       display: flex !important;
       justify-content: space-between;
       align-items: center;
       flex-wrap: nowrap;
-      width: 1024px;
+      width: 100%;
       margin-left: auto;
       margin-right: auto;
 
-      .nav-btn,
-      .nav-btn-active {
+      .nav-link,
+      .nav-link-active {
         padding-top: 27px;
         padding-bottom: 23px;
-        color: $color-txt-1;
         text-align: center;
         cursor: pointer;
-        transition: $trans-main;
       }
 
-      .nav-btn:hover,
-      .nav-btn:focus {
+      .nav-link:hover,
+      .nav-link:focus,
+      .nav-link:active,
+      .nav-link-active {
         color: $color-white;
-      }
-
-      .nav-btn:active,
-      .nav-btn-active {
-        color: $color-white;
-      }
-
-      .nav-btn h4,
-      .nav-btn-active h4 {
-        line-height: 0;
-        font-weight: 400;
       }
     }
   }
 
   .header-profile {
-    margin: 50px 0;
-
-    .header-profile-image {
-      width: fit-content;
-      margin-left: auto;
-      margin-right: auto;
+    margin-top: 64px;
+    margin-bottom: 64px;
+    @media #{$layout-xs-max} {
+      margin-top: 48px;
+      margin-bottom: 56px;
     }
 
-    .header-profile-image img {
-      max-width: 256px;
-      max-height: 256px;
+    .header-profile-image {
+      max-width: fit-content;
+      margin-left: auto;
+      margin-right: auto;
+
+      img {
+        max-width: 256px;
+        max-height: 256px;
+        transition: $trans-main;
+        user-select: none;
+        @media #{$layout-sm-max} {
+          max-width: 224px;
+          max-height: 224px;
+        }
+        @media #{$layout-xs-max} {
+          max-width: 192px;
+          max-height: 192px;
+        }
+      }
     }
 
     .header-profile-title {
       font-family: "Josefin Slab", sans-serif;
-      margin-top: 15px;
+      margin-top: 16px;
       text-align: center;
       font-weight: 400;
     }
     .header-profile-subtitle {
       font-family: "Josefin Slab", sans-serif;
-      margin-top: 15px;
+      margin-top: 16px;
       text-align: center;
       font-weight: 400;
     }
   }
+}
+
+.header-nav-s-btn {
+  visibility: hidden;
+  z-index: 1500;
+  position: absolute;
+  top: -28px;
+  right: 24px;
+  width: 56px;
+  height: 56px;
+  padding: 12px;
+  border: 2px solid $color-divider;
+  border-radius: 100%;
+  color: $color-txt-1;
+  background-color: transparent;
+  text-align: center;
+  font-size: 28px;
+  transition: $trans-main;
+  cursor: pointer;
+  &:hover,
+  &:focus {
+    right: 30px;
+    border-color: $color-main-1;
+    color: $color-white;
+    background-color: $color-main-1;
+  }
+  @media #{$layout-md-max} {
+    visibility: visible;
+  }
+}
+
+.header-nav-s {
+  visibility: hidden;
+  z-index: 2500;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  text-align: center;
+  transition: $trans-main;
+  @media #{$layout-md-max} {
+    visibility: visible;
+  }
+
+  .header-nav-s-backdrop {
+    z-index: 2501;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+  }
+
+  .nav-s {
+    z-index: 2502;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    max-height: 288px;
+    padding: 24px;
+    background: $color-main-1;
+    transition: $trans-main;
+
+    .nav-s-link,
+    .nav-s-link-active {
+      padding: 20px 0;
+      cursor: pointer;
+    }
+
+    .nav-s-link:hover,
+    .nav-s-link:focus,
+    .nav-s-link:active,
+    .nav-s-link-active {
+      color: $color-white;
+    }
+  }
+}
+
+.show {
+  background-color: #323232;
+}
+.hide {
+  background: #32323200;
+  pointer-events: none;
+  user-select: none;
 }
 
 /* ------------------------ FOOTER CSS ------------------------ */
@@ -224,9 +406,12 @@ footer {
   z-index: 998;
   width: 100%;
   margin-bottom: 128px;
+  @media #{$layout-sm-max} {
+    margin-bottom: 48px;
+  }
 
   .footer-break {
-    width: 1024px;
+    width: 100%;
     height: 3px;
     margin-top: 35px;
     margin-bottom: 25px;
@@ -239,34 +424,42 @@ footer {
     display: flex !important;
     justify-content: space-between;
     align-items: center;
-    width: 1024px;
-    margin-left: auto;
-    margin-right: auto;
+    transition: $trans-main;
+    @media #{$layout-sm-max} {
+      flex-wrap: wrap;
+    }
 
     .footer-left {
-      display: flex !important;
-      justify-content: space-between;
-      align-items: center;
+      width: 100%;
       font-size: 20px;
+      transition: $trans-main;
+      @media #{$layout-sm-max} {
+        text-align: center;
+        margin: 16px 0;
+      }
     }
 
     .footer-right {
-      display: flex !important;
-      justify-content: space-between;
-      align-items: center;
+      transition: $trans-main;
+      @media #{$layout-sm-max} {
+        width: 100%;
+      }
 
       .footer-social {
-        width: 184px;
         ul {
           display: flex !important;
           justify-content: space-between;
           align-items: center;
+          width: 184px;
+          margin-left: auto;
+          margin-right: auto;
 
           li {
             position: relative;
             a {
               transition: $trans-main;
-              &:hover {
+              &:hover,
+              &:focus {
                 .footer-icon {
                   border: 2px solid transparent;
                   margin-top: -6px;
@@ -294,7 +487,7 @@ footer {
 /* ------------------------ ABOUT CSS ------------------------ */
 
 .about {
-  width: 1024px;
+  width: 100%;
   margin-left: auto;
   margin-right: auto;
   line-height: 1.5;
@@ -327,7 +520,7 @@ footer {
 
 .resume-jpg {
   position: relative;
-  width: 1024px;
+  width: 100%;
   margin-left: auto;
   margin-right: auto;
 
@@ -373,7 +566,7 @@ footer {
   position: relative;
   display: flex;
   flex-wrap: nowrap;
-  width: 1024px;
+  width: 100%;
   margin-left: auto;
   margin-right: auto;
 
@@ -384,7 +577,7 @@ footer {
     .image-box {
       position: relative;
       width: 100%;
-      margin-bottom: 15px;
+      margin-bottom: 13px;
     }
 
     img {
@@ -399,8 +592,8 @@ footer {
   }
 
   .column-break {
-    max-width: 15px;
-    min-width: 15px;
+    max-width: 16px;
+    min-width: 16px;
     height: 100%;
   }
 }
@@ -440,9 +633,15 @@ footer {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  max-width: 1024px;
+  max-width: 75%;
   max-height: 90%;
+  transition: $trans-main;
   user-select: none;
+  @media #{$layout-md-max} {
+    top: 44%;
+    max-width: 100%;
+    max-height: 80%;
+  }
 }
 
 .carousel-btn {
@@ -461,16 +660,16 @@ footer {
   font-size: 24px;
   transition: $trans-main;
   cursor: pointer;
-  &:hover {
-    // border-color: $color-main-2;
-    // color: $color-white;
-    // background-color: $color-main-2;
+  @media #{$layout-md-max} {
+    top: initial;
+    bottom: 24px;
   }
 }
 .carousel-btn-left {
   left: 24px;
   transform: rotate(-90deg);
-  &:hover {
+  &:hover,
+  &:focus {
     left: 18px;
     border-color: $color-main-2;
     color: $color-white;
@@ -480,7 +679,8 @@ footer {
 .carousel-btn-right {
   right: 24px;
   transform: rotate(90deg);
-  &:hover {
+  &:hover,
+  &:focus {
     right: 18px;
     border-color: $color-main-1;
     color: $color-white;
@@ -497,7 +697,7 @@ footer {
   text-align: center;
 
   .error-box {
-    max-width: 1024px;
+    max-width: 100%;
     width: max-content;
     height: max-content;
     padding: 48px;
@@ -521,7 +721,7 @@ footer {
         transition: $trans-main;
         &:hover,
         &:focus {
-          color: $color-white;
+          color: $color-main-1;
         }
       }
     }

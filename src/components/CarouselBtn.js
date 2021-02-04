@@ -1,3 +1,4 @@
+import React from 'react';
 import { AiOutlineArrowUp } from "react-icons/ai";
 
 //////////////////////// COMPONENT ////////////////////////
