@@ -1,0 +1,529 @@
+/*
+
+TABLE OF CONTENTS
+
+*******************************************
+*******************************************
+
+** - Variables
+** - Default CSS
+** - Header CSS
+** - Footer CSS
+** - About CSS
+** - Resume CSS
+** - Column CSS
+** - Carousel CSS
+** - Error CSS
+** - Animation
+
+*/
+
+@import url("https://fonts.googleapis.com/css?family=Josefin+Sans:100,200,300,400,500,600,700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Josefin+Slab:100,300,400,600,700&display=swap");
+
+/* ------------------------ VARIABLES ------------------------ */
+
+// COLOR THEME
+$color-main-1: #c2e0a4;
+$color-main-2: #61c6c4;
+$color-white: #fff;
+$color-black: #000;
+$color-txt-1: #505050;
+$color-txt-2: #505050a0;
+$color-txt-3: #50505080;
+$color-txt-4: #50505040;
+$color-divider: #50505020;
+$color-divider-2: #ffffff20;
+
+// TEXT
+$h1: 50px;
+$h2: 32px;
+$h3: 24px;
+$h4: 21px;
+$h5: 18px;
+$h6: 16px;
+
+// FONT
+$font-family: "Josefin Sans", sans-serif;
+$font-size: 16px;
+$font-weight: 300;
+
+// TRANSITION
+$trans-fast: all 0.1s ease-out;
+$trans-main: all 0.2s ease-out;
+$trans-slow: all 0.4s ease-out;
+
+/* ------------------------ DEFAULT CSS ------------------------ */
+
+:focus {
+  outline-color: $color-main-1;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  line-height: 1;
+  font: {
+    family: $font-family;
+    size: $font-size;
+    weight: $font-weight;
+  }
+  color: $color-txt-1;
+  background-color: $color-white;
+}
+
+body.modal-open {
+  overflow: hidden;
+}
+
+a {
+  color: inherit;
+}
+
+h1 {
+  font-size: $h1;
+}
+h2 {
+  font-size: $h2;
+}
+h3 {
+  font-size: $h3;
+}
+h4 {
+  font-size: $h4;
+}
+h5 {
+  font-size: $h5;
+}
+h6 {
+  font-size: $h6;
+}
+
+#root {
+  position: relative;
+  min-height: 100vh;
+}
+
+section {
+  position: relative;
+  width: 100%;
+}
+
+// Scroll to top button
+.scroll-to-top {
+  z-index: 1500;
+  position: fixed;
+  bottom: 48px;
+  right: 48px;
+  width: 48px;
+  height: 48px;
+  padding: 10px;
+  border: 2px solid $color-divider;
+  border-radius: 100%;
+  color: $color-txt-1;
+  background-color: transparent;
+  text-align: center;
+  font-size: 24px;
+  transition: $trans-main;
+  cursor: pointer;
+  &:hover {
+    bottom: 54px;
+    border: 2px solid $color-main-1;
+    color: $color-white;
+    background-color: $color-main-1;
+  }
+}
+
+/* ------------------------ HEADER CSS ------------------------ */
+
+header {
+  z-index: 999;
+  width: 100%;
+
+  .header-break {
+    width: 100%;
+    height: 0px;
+  }
+
+  .header-nav {
+    height: 50px;
+    background: $color-main-1;
+    box-shadow: 0 0 32px rgba(0, 0, 0, 0.1);
+
+    nav {
+      display: flex !important;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: nowrap;
+      width: 1024px;
+      margin-left: auto;
+      margin-right: auto;
+
+      .nav-btn,
+      .nav-btn-active {
+        padding-top: 27px;
+        padding-bottom: 23px;
+        color: $color-txt-1;
+        text-align: center;
+        cursor: pointer;
+        transition: $trans-main;
+      }
+
+      .nav-btn:hover,
+      .nav-btn:focus {
+        color: $color-white;
+      }
+
+      .nav-btn:active,
+      .nav-btn-active {
+        color: $color-white;
+      }
+
+      .nav-btn h4,
+      .nav-btn-active h4 {
+        line-height: 0;
+        font-weight: 400;
+      }
+    }
+  }
+
+  .header-profile {
+    margin: 50px 0;
+
+    .header-profile-image {
+      width: fit-content;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .header-profile-image img {
+      max-width: 256px;
+      max-height: 256px;
+    }
+
+    .header-profile-title {
+      font-family: "Josefin Slab", sans-serif;
+      margin-top: 15px;
+      text-align: center;
+      font-weight: 400;
+    }
+    .header-profile-subtitle {
+      font-family: "Josefin Slab", sans-serif;
+      margin-top: 15px;
+      text-align: center;
+      font-weight: 400;
+    }
+  }
+}
+
+/* ------------------------ FOOTER CSS ------------------------ */
+
+footer {
+  z-index: 998;
+  width: 100%;
+  margin-bottom: 128px;
+
+  .footer-break {
+    width: 1024px;
+    height: 3px;
+    margin-top: 35px;
+    margin-bottom: 25px;
+    margin-left: auto;
+    margin-right: auto;
+    background: $color-divider;
+  }
+
+  .footer-wrap {
+    display: flex !important;
+    justify-content: space-between;
+    align-items: center;
+    width: 1024px;
+    margin-left: auto;
+    margin-right: auto;
+
+    .footer-left {
+      display: flex !important;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 20px;
+    }
+
+    .footer-right {
+      display: flex !important;
+      justify-content: space-between;
+      align-items: center;
+
+      .footer-social {
+        width: 184px;
+        ul {
+          display: flex !important;
+          justify-content: space-between;
+          align-items: center;
+
+          li {
+            position: relative;
+            a {
+              transition: $trans-main;
+              &:hover {
+                .footer-icon {
+                  border: 2px solid transparent;
+                  margin-top: -6px;
+                  color: $color-white;
+                  background-color: $color-main-2;
+                }
+              }
+            }
+          }
+        }
+        .footer-icon {
+          width: 40px;
+          height: 40px;
+          padding: 8px;
+          border: 2px solid $color-divider;
+          border-radius: 100%;
+          font-size: 20px;
+          transition: $trans-main;
+        }
+      }
+    }
+  }
+}
+
+/* ------------------------ ABOUT CSS ------------------------ */
+
+.about {
+  width: 1024px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.5;
+
+  .about-body {
+    display: inline;
+  }
+
+  .about-body-bold {
+    display: inline;
+    font-weight: 400;
+  }
+
+  .about-body-italic {
+    display: inline;
+    font-style: italic;
+  }
+
+  .about-body-link {
+    color: $color-main-2;
+    transition: $trans-main;
+    &:hover,
+    &:focus {
+      color: $color-main-1;
+    }
+  }
+}
+
+/* ------------------------ RESUME CSS ------------------------ */
+
+.resume-jpg {
+  position: relative;
+  width: 1024px;
+  margin-left: auto;
+  margin-right: auto;
+
+  img {
+    max-width: 100%;
+  }
+}
+
+.resume-btn {
+  position: relative;
+  width: 180px;
+  margin-top: 25px;
+  margin-left: auto;
+  margin-right: auto;
+
+  .resume-btn-shape {
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    border: 1px solid $color-main-2;
+    border-radius: 8px;
+    line-height: 1;
+    background: transparent;
+    color: $color-main-2;
+    transition: $trans-main;
+    &:hover,
+    &:focus {
+      background: $color-main-2;
+      color: $color-white;
+    }
+
+    h4 {
+      margin-top: 2px;
+      text-align: center;
+      font-weight: 500;
+    }
+  }
+}
+
+/* ------------------------ COLUMN CSS ------------------------ */
+
+.columns {
+  position: relative;
+  display: flex;
+  flex-wrap: nowrap;
+  width: 1024px;
+  margin-left: auto;
+  margin-right: auto;
+
+  .column {
+    position: relative;
+    width: 100%;
+
+    .image-box {
+      position: relative;
+      width: 100%;
+      margin-bottom: 15px;
+    }
+
+    img {
+      width: 100%;
+      transition: $trans-main;
+      cursor: pointer;
+      &:hover,
+      &:focus {
+        opacity: 0.5;
+      }
+    }
+  }
+
+  .column-break {
+    max-width: 15px;
+    min-width: 15px;
+    height: 100%;
+  }
+}
+
+/* ------------------------ CAROUSEL CSS ------------------------ */
+
+.carousel {
+  z-index: 2000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  transition: $trans-main;
+}
+
+.open {
+  background: #323232;
+}
+
+.close {
+  background: #32323200;
+  pointer-events: none;
+  user-select: none;
+}
+
+.carousel-backdrop {
+  z-index: 2000;
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+}
+
+.carousel-image {
+  z-index: 2001;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 1024px;
+  max-height: 90%;
+  user-select: none;
+}
+
+.carousel-btn {
+  z-index: 2002;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 48px;
+  height: 48px;
+  padding: 10px;
+  border: 2px solid $color-divider-2;
+  border-radius: 100%;
+  color: $color-white;
+  background-color: transparent;
+  text-align: center;
+  font-size: 24px;
+  transition: $trans-main;
+  cursor: pointer;
+  &:hover {
+    // border-color: $color-main-2;
+    // color: $color-white;
+    // background-color: $color-main-2;
+  }
+}
+.carousel-btn-left {
+  left: 24px;
+  transform: rotate(-90deg);
+  &:hover {
+    left: 18px;
+    border-color: $color-main-2;
+    color: $color-white;
+    background-color: $color-main-2;
+  }
+}
+.carousel-btn-right {
+  right: 24px;
+  transform: rotate(90deg);
+  &:hover {
+    right: 18px;
+    border-color: $color-main-1;
+    color: $color-white;
+    background-color: $color-main-1;
+  }
+}
+
+/* ------------------------ ERROR CSS ------------------------ */
+
+.error-main {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+
+  .error-box {
+    max-width: 1024px;
+    width: max-content;
+    height: max-content;
+    padding: 48px;
+    border-radius: 8px;
+    margin-left: auto;
+    margin-right: auto;
+    background: $color-divider;
+
+    .error-head {
+      font-size: 48px;
+      font-weight: 600;
+      margin-bottom: 24px;
+    }
+
+    .error-body {
+      font-size: 20px;
+
+      a {
+        font-weight: 400;
+        color: $color-main-2;
+        transition: $trans-main;
+        &:hover,
+        &:focus {
+          color: $color-white;
+        }
+      }
+    }
+  }
+}
