@@ -1,5 +1,5 @@
 import React from "react";
-import { Global } from "Global";
+import { Global } from "providers/Global";
 
 //////////////////////// COMPONENT ////////////////////////
 export default function About(props) {

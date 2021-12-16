@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { Global } from "Global";
+import { Global } from "providers/Global";
 import { GiHamburgerMenu } from "react-icons/gi";
 
 import profile_png from "../images/profile.png";

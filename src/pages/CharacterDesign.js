@@ -1,6 +1,6 @@
 import React from "react";
-import { Global } from "Global";
-import { Modal } from "Modal";
+import { Global } from "providers/Global";
+import { Modal } from "providers/Modal";
 
 import { importImages } from "lib/tools";
 
@@ -24,7 +24,7 @@ export default function CharacterDesign(props) {
   
   React.useEffect(() => {
     if (images && images?.length > 0) {
-      log(`CHARACTER DESIGN IMAGES:`, images);
+      // log(`CHARACTER DESIGN IMAGES:`, images);
       setImageSources(images?.map((image) => image.src));
       setOddImages(images?.filter((image) => image.isOdd));
       setEvenImages(images?.filter((image) => !image.isOdd));

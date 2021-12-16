@@ -1,6 +1,6 @@
 import React from "react";
-import { Global } from "Global";
-import { Modal } from "Modal";
+import { Global } from "providers/Global";
+import { Modal } from "providers/Modal";
 
 import { importImages } from "lib/tools";
 

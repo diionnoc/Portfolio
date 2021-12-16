@@ -1,5 +1,5 @@
 import React from "react";
-import { Global } from "Global";
+import { Global } from "providers/Global";
 
 import res_jpg from "../images/resume/chelsea_diionno_resume.jpg";
 import res_pdf from "../images/resume/chelsea_diionno_resume.pdf";
