@@ -1,6 +1,6 @@
 {
   "name": "chelsea-diionno",
-  "version": "0.4.0",
+  "version": "0.3.2",
   "author": "Eric Powell",
   "description": "Chelsea DiIonno | Character Designer & Visual Development Artist",
   "license": "ISC",
@@ -25,7 +25,6 @@
   },
   "dependencies": {
     "dayjs": "^1.11.1",
-    "googleapis": "^39.2.0",
     "node-sass": "^7.0.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
