@@ -44,7 +44,7 @@ export default function Illustration(props) {
         <div className="column">
           {oddImages.map((image, i) => (
             <div key={image?.name} className="image-box">
-              <img src={image?.src} alt={image?.name} onClick={onImageClick(image?.src)} />
+              <img src={image?.src} loading="lazy" alt={image?.name} onClick={onImageClick(image?.src)} />
             </div>
           ))}
         </div>
@@ -52,7 +52,7 @@ export default function Illustration(props) {
         <div className="column">
           {evenImages.map((image, i) => (
             <div key={image?.name} className="image-box">
-              <img src={image?.src} alt={image?.name} onClick={onImageClick(image?.src)} />
+              <img src={image?.src} loading="lazy" alt={image?.name} onClick={onImageClick(image?.src)} />
             </div>
           ))}
         </div>

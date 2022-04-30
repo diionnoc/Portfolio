@@ -21,10 +21,10 @@ export default function CharacterDesign(props) {
       setImages(() => importImages(`characterDesign`));
     }
   }, []);
-  
+
   React.useEffect(() => {
     if (images && images?.length > 0) {
-      // log(`CHARACTER DESIGN IMAGES:`, images);
+      log(`CHARACTER DESIGN IMAGES:`, images);
       setImageSources(images?.map((image) => image.src));
       setOddImages(images?.filter((image) => image.isOdd));
       setEvenImages(images?.filter((image) => !image.isOdd));
@@ -44,7 +44,7 @@ export default function CharacterDesign(props) {
         <div className="column">
           {oddImages.map((image, i) => (
             <div key={image?.name} className="image-box">
-              <img src={image?.src} alt={image?.name} onClick={onImageClick(image?.src)} />
+              <img src={image?.src} loading="lazy" alt={image?.name} onClick={onImageClick(image?.src)} />
             </div>
           ))}
         </div>
@@ -52,7 +52,7 @@ export default function CharacterDesign(props) {
         <div className="column">
           {evenImages.map((image, i) => (
             <div key={image?.name} className="image-box">
-              <img src={image?.src} alt={image?.name} onClick={onImageClick(image?.src)} />
+              <img src={image?.src} loading="lazy" alt={image?.name} onClick={onImageClick(image?.src)} />
             </div>
           ))}
         </div>

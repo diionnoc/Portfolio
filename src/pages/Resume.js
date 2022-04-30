@@ -17,7 +17,7 @@ export default function Resume(props) {
       <div className="resume-jpg">
         <a href={res_pdf} target="_blank" rel="noopener noreferrer">
           <div className="image-box">
-            <img src={res_jpg} alt="Resume" title="Resume" />
+            <img src={res_jpg} loading="lazy" alt="Resume" title="Resume" />
           </div>
         </a>
       </div>
