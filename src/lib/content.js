@@ -1,6 +1,6 @@
 //\//\//\//\//\//\//\//\//\//\//\//\//\//\//\//\//\//\//\//\//\//\//\//\//
 // Don't worry about this, but also don't touch it.
-import moment from "moment";
+import dayjs from "dayjs";
 import { FaLinkedinIn, FaInstagram, FaYoutube } from "react-icons/fa";
 import { MdMail } from "react-icons/md";
 //\//\//\//\//\//\//\//\//\//\//\//\//\//\//\//\//\//\//\//\//\//\//\//\//
@@ -37,5 +37,5 @@ export const footer = {
       icon: <FaYoutube />,
     },
   ],
-  copy: `©${moment().format(`YYYY`)}\xa0Chelsea\xa0DiIonno`,
+  copy: `©${dayjs().format(`YYYY`)}\xa0Chelsea\xa0DiIonno`,
 };

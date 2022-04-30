@@ -1,5 +1,5 @@
 import React from "react";
-import { Modal } from "Modal";
+import { Modal } from "providers/Modal";
 
 import CarouselBtn from "components/CarouselBtn";
 

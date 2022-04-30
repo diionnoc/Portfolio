@@ -1,8 +1,8 @@
 import React from "react";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
-import { GlobalProvider } from "Global";
-import { ModalProvider } from "Modal";
+import { GlobalProvider } from "providers/Global";
+import { ModalProvider } from "providers/Modal";
 
 import Header from "components/_Header";
 import Content from "components/_Content";

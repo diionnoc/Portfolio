@@ -22,19 +22,21 @@ export function importImages(page) {
   let images = [];
 
   for (let i = 0; i < imageKeys.length; i++) {
-    const img = {};
+    if (!imageKeys[i].includes(`images/`)) {
+      const img = {};
 
-    img.name = imageKeys[i].split(`.`)[0];
-    img.src = imageValues[i].default;
-    img.num = parseInt(imageKeys[i].split(`_`)[1].split(`.`)[0]) || null;
-    img.isOdd = img.num % 2;
+      img.name = imageKeys[i].split(`.`)[0];
+      img.src = imageValues[i];
+      img.num = parseInt(imageKeys[i].split(`_`)[1].split(`.`)[0]) || null;
+      img.isOdd = img.num % 2;
 
-    images.push({
-      name: img.name,
-      src: img.src,
-      num: img.num,
-      isOdd: img.isOdd,
-    });
+      images.push({
+        name: img.name,
+        src: img.src,
+        num: img.num,
+        isOdd: img.isOdd,
+      });
+    }
   }
 
   return images;

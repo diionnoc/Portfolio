@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { Global } from "Global";
+import { Global } from "providers/Global";
 
 //////////////////////// COMPONENT ////////////////////////
 export default function Error(props) {
