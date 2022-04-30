@@ -11,10 +11,11 @@ function importAll(r) {
 export function importImages(page) {
   let imageModules = {};
 
-  if (page === `characterDesign`) imageModules = importAll(require.context(`../images/characterDesign`, false, /\.(png|jpe?g|svg)$/));
-  else if (page === `illustration`) imageModules = importAll(require.context(`../images/illustration`, false, /\.(png|jpe?g|svg)$/));
-  else if (page === `design`) imageModules = importAll(require.context(`../images/design`, false, /\.(png|jpe?g|svg)$/));
-  else if (page === `photography`) imageModules = importAll(require.context(`../images/photography`, false, /\.(png|jpe?g|svg)$/));
+  if (page === `background`) imageModules = importAll(require.context(`../static/images/background`, false, /\.(png|jpe?g|svg)$/));
+  if (page === `characterDesign`) imageModules = importAll(require.context(`../static/images/characterDesign`, false, /\.(png|jpe?g|svg)$/));
+  if (page === `illustration`) imageModules = importAll(require.context(`../static/images/illustration`, false, /\.(png|jpe?g|svg)$/));
+  if (page === `design`) imageModules = importAll(require.context(`../static/images/design`, false, /\.(png|jpe?g|svg)$/));
+  if (page === `photography`) imageModules = importAll(require.context(`../static/images/photography`, false, /\.(png|jpe?g|svg)$/));
 
   const imageKeys = Object.keys(imageModules);
   const imageValues = Object.values(imageModules);
@@ -28,7 +29,7 @@ export function importImages(page) {
       img.name = imageKeys[i].split(`.`)[0];
       img.src = imageValues[i];
       img.num = parseInt(imageKeys[i].split(`_`)[1].split(`.`)[0]) || null;
-      img.isOdd = img.num % 2;
+      img.isOdd = img.num % 2 ? true : false;
 
       images.push({
         name: img.name,

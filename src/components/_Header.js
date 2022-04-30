@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { Global } from "providers/Global";
 import { GiHamburgerMenu } from "react-icons/gi";
 
-import profile_png from "../images/profile.png";
+import profile_png from "../static/images/profile.png";
 
 //////////////////////// COMPONENT ////////////////////////
 export default function Header(props) {
@@ -35,32 +35,37 @@ export default function Header(props) {
             <nav className="nav-s" onClick={handleCloseNav}>
               <Link to="/">
                 <div className={page === `about` ? `nav-s-link-active` : `nav-s-link`}>
-                  <h3>ABOUT</h3>
+                  <h4>ABOUT</h4>
                 </div>
               </Link>
-              <Link to="/character-design">
-                <div className={page === `character-design` ? `nav-s-link-active` : `nav-s-link`}>
-                  <h3>CHARACTER&nbsp;DESIGN</h3>
+              <Link to="/background">
+                <div className={page === `background` ? `nav-s-link-active` : `nav-s-link`}>
+                  <h4>BACKGROUND</h4>
                 </div>
               </Link>
               <Link to="/illustration">
                 <div className={page === `illustration` ? `nav-s-link-active` : `nav-s-link`}>
-                  <h3>ILLUSTRATION</h3>
+                  <h4>ILLUSTRATION</h4>
+                </div>
+              </Link>
+              <Link to="/character-design">
+                <div className={page === `character-design` ? `nav-s-link-active` : `nav-s-link`}>
+                  <h4>CHARACTER&nbsp;DESIGN</h4>
                 </div>
               </Link>
               <Link to="/design">
                 <div className={page === `design` ? `nav-s-link-active` : `nav-s-link`}>
-                  <h3>DESIGN</h3>
+                  <h4>DESIGN</h4>
                 </div>
               </Link>
               <Link to="/photography">
                 <div className={page === `photography` ? `nav-s-link-active` : `nav-s-link`}>
-                  <h3>PHOTOGRAPHY</h3>
+                  <h4>PHOTOGRAPHY</h4>
                 </div>
               </Link>
               <Link to="/resume">
                 <div className={page === `resume` ? `nav-s-link-active` : `nav-s-link`}>
-                  <h3>RESUME</h3>
+                  <h4>RESUME</h4>
                 </div>
               </Link>
             </nav>
@@ -74,32 +79,37 @@ export default function Header(props) {
           <nav className="nav">
             <Link to="/">
               <div className={page === `about` ? `nav-link-active` : `nav-link`}>
-                <h3>ABOUT</h3>
+                <h4>ABOUT</h4>
               </div>
             </Link>
-            <Link to="/character-design">
-              <div className={page === `character-design` ? `nav-link-active` : `nav-link`}>
-                <h3>CHARACTER&nbsp;DESIGN</h3>
+            <Link to="/background">
+              <div className={page === `background` ? `nav-link-active` : `nav-link`}>
+                <h4>BACKGROUND</h4>
               </div>
             </Link>
             <Link to="/illustration">
               <div className={page === `illustration` ? `nav-link-active` : `nav-link`}>
-                <h3>ILLUSTRATION</h3>
+                <h4>ILLUSTRATION</h4>
+              </div>
+            </Link>
+            <Link to="/character-design">
+              <div className={page === `character-design` ? `nav-link-active` : `nav-link`}>
+                <h4>CHARACTER&nbsp;DESIGN</h4>
               </div>
             </Link>
             <Link to="/design">
               <div className={page === `design` ? `nav-link-active` : `nav-link`}>
-                <h3>DESIGN</h3>
+                <h4>DESIGN</h4>
               </div>
             </Link>
             <Link to="/photography">
               <div className={page === `photography` ? `nav-link-active` : `nav-link`}>
-                <h3>PHOTOGRAPHY</h3>
+                <h4>PHOTOGRAPHY</h4>
               </div>
             </Link>
             <Link to="/resume">
               <div className={page === `resume` ? `nav-link-active` : `nav-link`}>
-                <h3>RESUME</h3>
+                <h4>RESUME</h4>
               </div>
             </Link>
           </nav>
