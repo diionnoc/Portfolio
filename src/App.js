@@ -11,6 +11,7 @@ import ScrollToTop from "components/ScrollToTop";
 import Carousel from "components/Carousel";
 
 import About from "pages/About";
+import Background from "pages/Background";
 import CharacterDesign from "pages/CharacterDesign";
 import Illustration from "pages/Illustration";
 import Design from "pages/Design";
@@ -28,6 +29,7 @@ export default function App() {
           <Content>
             <Switch>
               <Route exact path="/" component={() => <About />} />
+              <Route exact path="/background" component={() => <Background />} />
               <Route exact path="/character-design" component={() => <CharacterDesign />} />
               <Route exact path="/illustration" component={() => <Illustration />} />
               <Route exact path="/design" component={() => <Design />} />
