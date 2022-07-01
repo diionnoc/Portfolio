@@ -38,29 +38,14 @@ export default function Header(props) {
                   <h4>ABOUT</h4>
                 </div>
               </Link>
-              <Link to="/background">
-                <div className={page === `background` ? `nav-s-link-active` : `nav-s-link`}>
-                  <h4>BACKGROUND</h4>
-                </div>
-              </Link>
               <Link to="/illustration">
                 <div className={page === `illustration` ? `nav-s-link-active` : `nav-s-link`}>
                   <h4>ILLUSTRATION</h4>
                 </div>
               </Link>
-              <Link to="/character-design">
-                <div className={page === `character-design` ? `nav-s-link-active` : `nav-s-link`}>
-                  <h4>CHARACTER&nbsp;DESIGN</h4>
-                </div>
-              </Link>
-              <Link to="/design">
-                <div className={page === `design` ? `nav-s-link-active` : `nav-s-link`}>
-                  <h4>DESIGN</h4>
-                </div>
-              </Link>
-              <Link to="/photography">
-                <div className={page === `photography` ? `nav-s-link-active` : `nav-s-link`}>
-                  <h4>PHOTOGRAPHY</h4>
+              <Link to="/concept-art">
+                <div className={page === `concept-art` ? `nav-s-link-active` : `nav-s-link`}>
+                  <h4>CONCEPT&nbsp;ART</h4>
                 </div>
               </Link>
               <Link to="/resume">
@@ -82,29 +67,14 @@ export default function Header(props) {
                 <h4>ABOUT</h4>
               </div>
             </Link>
-            <Link to="/background">
-              <div className={page === `background` ? `nav-link-active` : `nav-link`}>
-                <h4>BACKGROUND</h4>
-              </div>
-            </Link>
             <Link to="/illustration">
               <div className={page === `illustration` ? `nav-link-active` : `nav-link`}>
                 <h4>ILLUSTRATION</h4>
               </div>
             </Link>
-            <Link to="/character-design">
-              <div className={page === `character-design` ? `nav-link-active` : `nav-link`}>
-                <h4>CHARACTER&nbsp;DESIGN</h4>
-              </div>
-            </Link>
-            <Link to="/design">
-              <div className={page === `design` ? `nav-link-active` : `nav-link`}>
-                <h4>DESIGN</h4>
-              </div>
-            </Link>
-            <Link to="/photography">
-              <div className={page === `photography` ? `nav-link-active` : `nav-link`}>
-                <h4>PHOTOGRAPHY</h4>
+            <Link to="/concept-art">
+              <div className={page === `concept-art` ? `nav-link-active` : `nav-link`}>
+                <h4>CONCEPT&nbsp;ART</h4>
               </div>
             </Link>
             <Link to="/resume">

@@ -11,10 +11,10 @@ function importAll(r) {
 export function importImages(page) {
   let imageModules = {};
 
-  if (page === `background`) imageModules = importAll(require.context(`../static/images/background`, false, /\.(png|jpe?g|svg)$/));
   if (page === `characterDesign`) imageModules = importAll(require.context(`../static/images/characterDesign`, false, /\.(png|jpe?g|svg)$/));
-  if (page === `illustration`) imageModules = importAll(require.context(`../static/images/illustration`, false, /\.(png|jpe?g|svg)$/));
+  if (page === `conceptArt`) imageModules = importAll(require.context(`../static/images/conceptArt`, false, /\.(png|jpe?g|svg)$/));
   if (page === `design`) imageModules = importAll(require.context(`../static/images/design`, false, /\.(png|jpe?g|svg)$/));
+  if (page === `illustration`) imageModules = importAll(require.context(`../static/images/illustration`, false, /\.(png|jpe?g|svg)$/));
   if (page === `photography`) imageModules = importAll(require.context(`../static/images/photography`, false, /\.(png|jpe?g|svg)$/));
 
   const imageKeys = Object.keys(imageModules);

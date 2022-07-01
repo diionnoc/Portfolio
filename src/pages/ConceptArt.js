@@ -5,7 +5,7 @@ import { Modal } from "providers/Modal";
 import { importImages } from "lib/tools";
 
 //////////////////////// COMPONENT ////////////////////////
-export default function CharacterDesign(props) {
+export default function ConceptArt(props) {
   const { log, handlePage } = React.useContext(Global);
   const { setModalImages, setSelectedImage } = React.useContext(Modal);
 
@@ -15,16 +15,16 @@ export default function CharacterDesign(props) {
   const [evenImages, setEvenImages] = React.useState([]);
 
   React.useEffect(() => {
-    handlePage(`character-design`);
+    handlePage(`concept-art`);
 
     if (!images || images.length === 0) {
-      setImages(() => importImages(`characterDesign`));
+      setImages(() => importImages(`conceptArt`));
     }
   }, []);
 
   React.useEffect(() => {
     if (images && images?.length > 0) {
-      log(`CHARACTER DESIGN IMAGES:`, images);
+      log(`CONCEPT ART IMAGES:`, images);
       setImageSources(images?.map((image) => image.src));
       setOddImages(images?.filter((image) => image.isOdd));
       setEvenImages(images?.filter((image) => !image.isOdd));
@@ -39,7 +39,7 @@ export default function CharacterDesign(props) {
   };
 
   return (
-    <section id="character-design">
+    <section id="concept-art">
       <div className="columns">
         <div className="column">
           {oddImages.map((image, i) => (
