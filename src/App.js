@@ -11,10 +11,10 @@ import ScrollToTop from "components/ScrollToTop";
 import Carousel from "components/Carousel";
 
 import About from "pages/About";
-import Background from "pages/Background";
 import CharacterDesign from "pages/CharacterDesign";
-import Illustration from "pages/Illustration";
+import ConceptArt from "pages/ConceptArt";
 import Design from "pages/Design";
+import Illustration from "pages/Illustration";
 import Photography from "pages/Photography";
 import Resume from "pages/Resume";
 import Error from "pages/Error";
@@ -29,10 +29,10 @@ export default function App() {
           <Content>
             <Switch>
               <Route exact path="/" component={() => <About />} />
-              <Route exact path="/background" component={() => <Background />} />
               <Route exact path="/character-design" component={() => <CharacterDesign />} />
-              <Route exact path="/illustration" component={() => <Illustration />} />
+              <Route exact path="/concept-art" component={() => <ConceptArt />} />
               <Route exact path="/design" component={() => <Design />} />
+              <Route exact path="/illustration" component={() => <Illustration />} />
               <Route exact path="/photography" component={() => <Photography />} />
               <Route exact path="/resume" component={() => <Resume />} />
               <Route component={() => <Error />} />
