@@ -1,10 +1,13 @@
+// -------------------------------- DEPENDENCIES -------------------------------- //
+
 import React from "react";
 import { Global } from "providers/Global";
 import { Modal } from "providers/Modal";
 
 import { importImages } from "lib/tools";
 
-//////////////////////// COMPONENT ////////////////////////
+// -------------------------------- COMPONENT -------------------------------- //
+
 export default function ConceptArt(props) {
   const { log, handlePage } = React.useContext(Global);
   const { setModalImages, setSelectedImage } = React.useContext(Modal);

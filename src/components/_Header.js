@@ -1,3 +1,5 @@
+// -------------------------------- DEPENDENCIES -------------------------------- //
+
 import React from "react";
 import { Link } from "react-router-dom";
 import { Global } from "providers/Global";
@@ -5,7 +7,8 @@ import { GiHamburgerMenu } from "react-icons/gi";
 
 import profile_png from "../static/images/profile.png";
 
-//////////////////////// COMPONENT ////////////////////////
+// -------------------------------- COMPONENT -------------------------------- //
+
 export default function Header(props) {
   const { page } = React.useContext(Global);
 
@@ -91,7 +94,7 @@ export default function Header(props) {
             <img src={profile_png} alt="Profile" title="Chelsea DiIonno" />
           </div>
           <h1 className="header-profile-title">Chelsea DiIonno</h1>
-          <h2 className="header-profile-subtitle">Character&nbsp;Designer & Visual&nbsp;Development&nbsp;Artist</h2>
+          <h2 className="header-profile-subtitle">Visual&nbsp;Development&nbsp;&&nbsp;Environment&nbsp;Artist</h2>
         </div>
       </div>
     </header>

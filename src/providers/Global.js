@@ -1,9 +1,13 @@
+// -------------------------------- DEPENDENCIES -------------------------------- //
+
 import React from "react";
 
-/** Global Context Object */
+// -------------------------------- CONTEXT -------------------------------- //
+
 export const Global = React.createContext();
 
-/** Global Context Provider */
+// -------------------------------- PROVIDER -------------------------------- //
+
 export function GlobalProvider({ children }) {
   const [page, setPage] = React.useState(`about`);
 

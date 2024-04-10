@@ -1,5 +1,7 @@
+// -------------------------------- DEPENDENCIES -------------------------------- //
+
 import React from "react";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import { GlobalProvider } from "providers/Global";
 import { ModalProvider } from "providers/Modal";
@@ -16,7 +18,8 @@ import Illustration from "pages/Illustration";
 import Resume from "pages/Resume";
 import Error from "pages/Error";
 
-//////////////////////// COMPONENT ////////////////////////
+// -------------------------------- COMPONENT -------------------------------- //
+
 export default function App() {
   return (
     <Router>
@@ -24,13 +27,13 @@ export default function App() {
         <ModalProvider>
           <Header />
           <Content>
-            <Switch>
-              <Route exact path="/" component={() => <About />} />
-              <Route exact path="/concept-art" component={() => <ConceptArt />} />
-              <Route exact path="/illustration" component={() => <Illustration />} />
-              <Route exact path="/resume" component={() => <Resume />} />
-              <Route component={() => <Error />} />
-            </Switch>
+            <Routes>
+              <Route exact path="/" element={<About />} />
+              <Route exact path="/concept-art" element={<ConceptArt />} />
+              <Route exact path="/illustration" element={<Illustration />} />
+              <Route exact path="/resume" element={<Resume />} />
+              <Route element={<Error />} />
+            </Routes>
           </Content>
           <Footer />
           <ScrollToTop />

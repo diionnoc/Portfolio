@@ -1,6 +1,9 @@
+// -------------------------------- DEPENDENCIES -------------------------------- //
+
 import React from "react";
 
-//////////////////////// COMPONENT ////////////////////////
+// -------------------------------- COMPONENT -------------------------------- //
+
 export default function Content(props) {
   return (
     <main id="content">
