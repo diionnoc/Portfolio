@@ -1,11 +1,12 @@
-//\//\//\//\//\//\//\//\//\//\//\//\//\//\//\//\//\//\//\//\//\//\//\//\//
-// Don't worry about this, but also don't touch it.
+// -------------------------------- DEPENDENCIES -------------------------------- //
+
 import dayjs from "dayjs";
 import { FaLinkedinIn, FaInstagram, FaYoutube } from "react-icons/fa";
 import { MdMail } from "react-icons/md";
-//\//\//\//\//\//\//\//\//\//\//\//\//\//\//\//\//\//\//\//\//\//\//\//\//
 
-// This is the data for the "Footer" at the bottom
+// -------------------------------- EXPORTS -------------------------------- //
+
+// Data for the footer
 export const footer = {
   socials: [
     {

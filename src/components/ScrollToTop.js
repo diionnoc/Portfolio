@@ -1,7 +1,10 @@
+// -------------------------------- DEPENDENCIES -------------------------------- //
+
 import React from "react";
 import { AiOutlineArrowUp } from "react-icons/ai";
 
-//////////////////////// COMPONENT ////////////////////////
+// -------------------------------- COMPONENT -------------------------------- //
+
 export default function ScrollToTop(props) {
   const [visible, setVisible] = React.useState(false);
 

@@ -1,10 +1,13 @@
+// -------------------------------- DEPENDENCIES -------------------------------- //
+
 import React from "react";
 import { Global } from "providers/Global";
 
 import res_png from "../static/images/resume/chelsea_diionno_resume.png";
 import res_pdf from "../static/images/resume/chelsea_diionno_resume.pdf";
 
-//////////////////////// COMPONENT ////////////////////////
+// -------------------------------- COMPONENT -------------------------------- //
+
 export default function Resume(props) {
   const { handlePage } = React.useContext(Global);
 

@@ -1,9 +1,12 @@
+// -------------------------------- DEPENDENCIES -------------------------------- //
+
 import React from "react";
 import { Modal } from "providers/Modal";
 
 import CarouselBtn from "components/CarouselBtn";
 
-//////////////////////// COMPONENT ////////////////////////
+// -------------------------------- COMPONENT -------------------------------- //
+
 export default function Carousel(props) {
   const { modalImages, setModalImages, selectedImage, setSelectedImage } = React.useContext(Modal);
 

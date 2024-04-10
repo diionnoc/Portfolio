@@ -1,7 +1,10 @@
+// -------------------------------- DEPENDENCIES -------------------------------- //
+
 import React from "react";
 import { footer } from "lib/content";
 
-//////////////////////// COMPONENT ////////////////////////
+// -------------------------------- COMPONENT -------------------------------- //
+
 export default function Footer(props) {
   return (
     <footer id="footer">

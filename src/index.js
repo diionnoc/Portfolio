@@ -1,7 +1,13 @@
+// -------------------------------- DEPENDENCIES -------------------------------- //
+
 import React from "react";
-import ReactDOM from "react-dom";
+import ReactDOM from "react-dom/client";
 import App from "App";
 import "static/styles/reset.css";
 import "static/styles/index.scss";
 
-ReactDOM.render(<App />, document.getElementById("root"));
+// -------------------------------- RENDER -------------------------------- //
+
+const root = document.getElementById("root");
+const app = ReactDOM.createRoot(root);
+app.render(<App />);

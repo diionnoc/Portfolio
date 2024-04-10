@@ -11,8 +11,10 @@ function importAll(r) {
 export function importImages(page) {
   let imageModules = {};
 
-  if (page === `conceptArt`) imageModules = importAll(require.context(`../static/images/conceptArt`, false, /\.(png|jpe?g|svg)$/));
-  if (page === `illustration`) imageModules = importAll(require.context(`../static/images/illustration`, false, /\.(png|jpe?g|svg)$/));
+  if (page === `conceptArt`)
+    imageModules = importAll(require.context(`../static/images/conceptArt`, false, /\.(png|jpe?g|svg)$/));
+  if (page === `illustration`)
+    imageModules = importAll(require.context(`../static/images/illustration`, false, /\.(png|jpe?g|svg)$/));
 
   const imageKeys = Object.keys(imageModules);
   const imageValues = Object.values(imageModules);

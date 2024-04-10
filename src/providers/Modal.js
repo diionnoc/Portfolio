@@ -1,9 +1,13 @@
-import React from 'react';
+// -------------------------------- DEPENDENCIES -------------------------------- //
 
-/** Modal Context Object */
+import React from "react";
+
+// -------------------------------- CONTEXT -------------------------------- //
+
 export const Modal = React.createContext();
 
-/** Modal Context Provider */
+// -------------------------------- PROVIDER -------------------------------- //
+
 export function ModalProvider({ children }) {
   const [modalImages, setModalImages] = React.useState([]);
   const [selectedImage, setSelectedImage] = React.useState(null);
@@ -14,10 +18,8 @@ export function ModalProvider({ children }) {
     setModalImages: setModalImages,
     selectedImage: selectedImage,
     setSelectedImage: setSelectedImage,
-  }
+  };
 
   // Return the Modal.Provider and wrap it around the contents of App.js
-  return (
-    <Modal.Provider value={ctx}>{children}</Modal.Provider>
-  )
+  return <Modal.Provider value={ctx}>{children}</Modal.Provider>;
 }
