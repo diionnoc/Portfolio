@@ -1,10 +1,11 @@
 {
   "name": "chelsea-diionno",
   "version": "1.0.0",
-  "author": "Eric Powell",
   "description": "Chelsea DiIonno | Visual Development & Environment Artist",
-  "license": "ISC",
+  "author": "Eric Powell",
+  "license": "UNLICENSED",
   "private": true,
+  "homepage": "https://chelseadiionno.com",
   "browserslist": {
     "production": [
       ">0.2%",
@@ -15,6 +16,12 @@
       "last 1 chrome version",
       "last 1 firefox version",
       "last 1 safari version"
+    ]
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
     ]
   },
   "scripts": {
@@ -31,6 +38,5 @@
     "react-icons": "^4.12.0",
     "react-router-dom": "^6.22.3",
     "react-scripts": "^5.0.1"
-  },
-  "homepage": "https://chelseadiionno.com"
+  }
 }
