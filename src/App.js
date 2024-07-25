@@ -26,6 +26,7 @@ export default function App() {
       <GlobalProvider>
         <ModalProvider>
           <Header />
+
           <Content>
             <Routes>
               <Route exact path="/" element={<About />} />
@@ -35,8 +36,11 @@ export default function App() {
               <Route element={<Error />} />
             </Routes>
           </Content>
+
           <Footer />
+
           <ScrollToTop />
+
           <Carousel />
         </ModalProvider>
       </GlobalProvider>
